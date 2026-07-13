@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import "./globals.css"; // Ensure your global tailwind styling is imported here
 
@@ -22,15 +23,21 @@ export default function RootLayout({
           <aside className="fixed inset-y-0 left-0 w-64 bg-slate-950 text-slate-200 flex flex-col border-r border-slate-800 z-50">
             
             {/* PSYCHE ACADEMY BRAND HEADER */}
-            <div className="p-6 border-b border-slate-800">
-              <Link href="/" className="flex items-center space-x-2">
-                <span className="text-xl font-black text-white tracking-wider">
-                  Psyche <span className="text-purple-500">Academy</span>
-                </span>
+            <div className="border-b border-slate-800 p-4">
+              <Link
+                href="/"
+                className="block overflow-hidden rounded-xl bg-white p-1.5 transition-opacity hover:opacity-90"
+                aria-label="Psyche Academy home"
+              >
+                <Image
+                  src="/images/psyche-academy-logo.png"
+                  alt="Psyche Academy — Empowering minds. Shaping futures."
+                  width={1254}
+                  height={1254}
+                  className="h-auto w-full"
+                  priority
+                />
               </Link>
-              <p className="text-[10px] text-purple-400 font-semibold tracking-widest mt-1 uppercase">
-                IELTS Learning Suite
-              </p>
             </div>
 
             {/* NAV LINKS NAVIGATION */}
