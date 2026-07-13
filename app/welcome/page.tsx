@@ -97,7 +97,7 @@ export default function WelcomePage() {
                 Psyche <span className="text-[#d27542]">Academy</span>
               </span>
             </Link>
-            <a href="https://wa.me/15550192834" className="rounded-full bg-[#1e4d38] px-4 py-2.5 text-xs font-extrabold text-white shadow-lg shadow-[#1e4d38]/15 transition hover:bg-[#173d2d] sm:px-5 sm:text-sm">
+            <a href="https://wa.me/917012224008" className="rounded-full bg-[#1e4d38] px-4 py-2.5 text-xs font-extrabold text-white shadow-lg shadow-[#1e4d38]/15 transition hover:bg-[#173d2d] sm:px-5 sm:text-sm">
               Enquire now
             </a>
           </nav>
@@ -117,7 +117,7 @@ export default function WelcomePage() {
                 <a href="#programmes" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1e4d38] px-6 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-[#1e4d38]/20 transition hover:-translate-y-0.5 hover:bg-[#173d2d]">
                   Explore our programmes <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
-                <a href="https://wa.me/15550192834" className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1e4d38]/20 bg-white/70 px-6 py-3.5 text-sm font-extrabold text-[#1e4d38] transition hover:bg-white">
+                <a href="https://wa.me/917012224008" className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1e4d38]/20 bg-white/70 px-6 py-3.5 text-sm font-extrabold text-[#1e4d38] transition hover:bg-white">
                   <MessageCircle className="h-4 w-4" aria-hidden="true" /> Chat on WhatsApp
                 </a>
               </div>
@@ -168,7 +168,7 @@ export default function WelcomePage() {
                   </div>
                   <h3 className="mt-7 text-xl font-extrabold tracking-tight text-[#1d4531]">{title}</h3>
                   <p className="mt-3 min-h-20 text-sm leading-6 text-[#637668]">{description}</p>
-                  <a href="https://wa.me/15550192834" className="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-[#286143] transition group-hover:text-[#d27542]">
+                  <a href="https://wa.me/917012224008" className="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-[#286143] transition group-hover:text-[#d27542]">
                     Enquire about this <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
                 </article>
@@ -179,7 +179,7 @@ export default function WelcomePage() {
                 <p className="text-xl font-extrabold text-white">Not sure where to begin?</p>
                 <p className="mt-1 text-sm text-[#c5ddca]">Tell us your goal and we&apos;ll help you choose a starting point.</p>
               </div>
-              <a href="https://wa.me/15550192834" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#f2c985] px-5 py-3 text-sm font-extrabold text-[#244231] transition hover:bg-[#f7d79e]">
+              <a href="https://wa.me/917012224008" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#f2c985] px-5 py-3 text-sm font-extrabold text-[#244231] transition hover:bg-[#f7d79e]">
                 <MessageCircle className="h-4 w-4" aria-hidden="true" /> WhatsApp us
               </a>
             </div>
@@ -225,12 +225,12 @@ export default function WelcomePage() {
             <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-[#f2c985]">Let&apos;s talk</p>
             <div className="mt-3 grid gap-8 lg:grid-cols-[1fr_.78fr] lg:items-end">
               <div><h2 className="text-4xl font-black tracking-[-0.05em] sm:text-5xl">Your next step can be a simple hello.</h2><p className="mt-5 max-w-xl text-lg leading-8 text-[#c5ddca]">Call, message, or email our team to ask a question, discuss a programme, or plan training for your organisation.</p></div>
-              <a href="https://wa.me/15550192834" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#f2c985] px-6 py-4 text-sm font-extrabold text-[#1d4531] transition hover:bg-[#f7d79e] lg:w-auto"><MessageCircle className="h-5 w-5" aria-hidden="true" /> Start a WhatsApp conversation</a>
+              <a href="https://wa.me/917012224008" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#f2c985] px-6 py-4 text-sm font-extrabold text-[#1d4531] transition hover:bg-[#f7d79e] lg:w-auto"><MessageCircle className="h-5 w-5" aria-hidden="true" /> Start a WhatsApp conversation</a>
             </div>
             <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              <a href="tel:+15550192834" className="contact-link"><Phone className="h-5 w-5" /> <span><b>Call</b><small>+1 (555) 019-2834</small></span></a>
-              <a href="https://wa.me/15550192834" className="contact-link"><MessageCircle className="h-5 w-5" /> <span><b>WhatsApp</b><small>Message our team</small></span></a>
-              <a href="mailto:support@psycheacademy.com" className="contact-link"><Mail className="h-5 w-5" /> <span><b>Email</b><small>support@psycheacademy.com</small></span></a>
+              <a href="tel:+917012224008" className="contact-link"><Phone className="h-5 w-5" /> <span><b>Call</b><small>+91 70122 24008</small></span></a>
+              <a href="https://wa.me/917012224008" className="contact-link"><MessageCircle className="h-5 w-5" /> <span><b>WhatsApp</b><small>+91 70122 24008</small></span></a>
+              <a href="mailto:drsanjay@psyche-academy.com" className="contact-link"><Mail className="h-5 w-5" /> <span><b>Email</b><small>drsanjay@psyche-academy.com</small></span></a>
               <a href="#contact" className="contact-link"><AtSign className="h-5 w-5" /> <span><b>Instagram</b><small>@psycheacademy</small></span></a>
               <a href="#contact" className="contact-link"><UsersRound className="h-5 w-5" /> <span><b>LinkedIn</b><small>Psyche Academy</small></span></a>
               <a href="#contact" className="contact-link"><MapPin className="h-5 w-5" /> <span><b>Address</b><small>Visit us for a conversation</small></span></a>
@@ -242,7 +242,7 @@ export default function WelcomePage() {
       <footer className="bg-[#102d21] px-5 py-9 text-[#c5ddca] sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
           <div className="flex items-center gap-2"><BrandMark footer /><div><p className="font-extrabold text-white">Psyche Academy</p><p className="mt-1 text-xs">Empowering minds. Shaping futures.</p></div></div>
-          <a href="https://wa.me/15550192834" className="inline-flex items-center gap-2 text-sm font-extrabold text-[#f2c985] hover:text-[#f7d79e]"><MessageCircle className="h-4 w-4" /> Contact us on WhatsApp</a>
+          <a href="https://wa.me/917012224008" className="inline-flex items-center gap-2 text-sm font-extrabold text-[#f2c985] hover:text-[#f7d79e]"><MessageCircle className="h-4 w-4" /> Contact us on WhatsApp</a>
         </div>
       </footer>
 

@@ -12,6 +12,7 @@ const navigation = [
   ["Home", "/"],
   ["About", "/about"],
   ["Courses", "/courses"],
+  ["Free practice", "/free-practice"],
   ["IELTS", "/ielts"],
   ["Spoken English", "/spoken-english"],
   ["Training", "/corporate-training"],
