@@ -1,112 +1,58 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import "./globals.css"; // Ensure your global tailwind styling is imported here
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Psyche Academy - IELTS Prep Arena",
-  description: "Seamless interactive practice environment",
+  title: "Psyche Academy - Empowering Minds, Shaping Futures",
+  description: "Learning programmes for English, confidence, careers, and personal growth.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const navigation = [
+  ["Home", "/"],
+  ["About", "/about"],
+  ["Courses", "/courses"],
+  ["IELTS", "/ielts"],
+  ["Spoken English", "/spoken-english"],
+  ["Training", "/corporate-training"],
+  ["Psychology", "/psychology"],
+  ["Blog", "/blog"],
+  ["Contact", "/contact"],
+];
+
+function GlobalNavigation() {
+  return (
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#dfe9dd] bg-[#faf9f5]/95 backdrop-blur">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <Link href="/welcome" className="flex shrink-0 items-center gap-2" aria-label="Psyche Academy home">
+          <span className="relative h-10 w-11 overflow-hidden" aria-hidden="true">
+            <Image src="/images/psyche-academy-logo.png" alt="" width={1254} height={1254} className="absolute left-1/2 top-[-8px] w-[70px] max-w-none -translate-x-1/2" priority />
+          </span>
+          <span className="hidden font-black tracking-tight text-[#1e4d38] sm:inline">Psyche <span className="text-[#d27542]">Academy</span></span>
+        </Link>
+        <div className="hidden items-center gap-4 xl:flex">
+          {navigation.map(([label, href]) => <Link key={href} href={href} className="text-xs font-extrabold text-[#5b6f60] transition hover:text-[#1e4d38]">{label}</Link>)}
+        </div>
+        <div className="flex items-center gap-2">
+          <details className="relative xl:hidden">
+            <summary className="cursor-pointer list-none rounded-full border border-[#cfe0cf] px-3 py-2 text-xs font-extrabold text-[#1e4d38]">Menu</summary>
+            <div className="absolute right-0 top-11 z-20 w-56 rounded-2xl border border-[#dfe9dd] bg-white p-2 shadow-xl">
+              {navigation.map(([label, href]) => <Link key={href} href={href} className="block rounded-xl px-3 py-2.5 text-sm font-bold text-[#426050] hover:bg-[#edf7eb]">{label}</Link>)}
+            </div>
+          </details>
+          <Link href="/welcome" className="rounded-full bg-[#1e4d38] px-3 py-2 text-xs font-extrabold text-white sm:px-4">Enquire</Link>
+        </div>
+      </nav>
+    </header>
+  );
+}
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="antialiased bg-gray-50 text-gray-900">
-        
-        <div className="flex min-h-screen">
-          
-          {/* GLOBAL FIXED SIDEBAR */}
-          <aside className="fixed inset-y-0 left-0 w-64 bg-slate-950 text-slate-200 flex flex-col border-r border-slate-800 z-50">
-            
-            {/* PSYCHE ACADEMY BRAND HEADER */}
-            <div className="border-b border-slate-800 p-4">
-              <Link
-                href="/"
-                className="block overflow-hidden rounded-xl bg-white p-1.5 transition-opacity hover:opacity-90"
-                aria-label="Psyche Academy home"
-              >
-                <Image
-                  src="/images/psyche-academy-logo.png"
-                  alt="Psyche Academy — Empowering minds. Shaping futures."
-                  width={1254}
-                  height={1254}
-                  className="h-auto w-full"
-                  priority
-                />
-              </Link>
-            </div>
-
-            {/* NAV LINKS NAVIGATION */}
-            <nav className="flex-1 p-4 space-y-1.5 mt-4">
-              <Link 
-                href="/dashboard" 
-                className="flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-semibold transition-colors text-slate-400 hover:bg-slate-900 hover:text-white"
-              >
-                <span>📊</span>
-                <span>Dashboard</span>
-              </Link>
-
-              <Link 
-                href="/modules" 
-                className="flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-semibold transition-colors text-slate-400 hover:bg-slate-900 hover:text-white"
-              >
-                <span>📚</span>
-                <span>Reading Modules</span>
-              </Link>
-
-              <Link 
-                href="/practice?test=R1" 
-                className="flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-semibold transition-colors text-white bg-purple-700 shadow-md shadow-purple-900/20"
-              >
-                <span>✍️</span>
-                <span>Active Test Arena</span>
-              </Link>
-
-              <Link 
-                href="/vocabulary" 
-                className="flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-semibold transition-colors text-slate-400 hover:bg-slate-900 hover:text-white"
-              >
-                <span>📖</span>
-                <span>Vocabulary Pack</span>
-              </Link>
-
-              <hr className="border-slate-800 my-4" />
-
-              <Link 
-                href="/profile" 
-                className="flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-semibold transition-colors text-slate-400 hover:bg-slate-900 hover:text-white"
-              >
-                <span>👤</span>
-                <span>My Profile</span>
-              </Link>
-            </nav>
-
-            {/* BOTTOM PROFILE SIGNPOST */}
-            <div className="p-4 border-t border-slate-800 bg-slate-950/60">
-              <div className="flex items-center space-x-3 p-2">
-                <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center font-bold text-white text-xs">
-                  PA
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-white leading-tight">Student Workspace</p>
-                  <p className="text-[10px] text-purple-400">Premium Access</p>
-                </div>
-              </div>
-            </div>
-
-          </aside>
-
-          {/* RIGHT SIDE DATA WRAPPER */}
-          <main className="flex-1 pl-64 min-h-screen bg-gray-50">
-            {children}
-          </main>
-
-        </div>
-
+      <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+        <GlobalNavigation />
+        <main className="min-h-screen pt-16">{children}</main>
       </body>
     </html>
   );

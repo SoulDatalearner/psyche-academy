@@ -1,0 +1,5 @@
+import Link from "next/link";
+
+export default function StudentPortalPage() {
+  return <section><p className="text-xs font-extrabold uppercase tracking-[.16em] text-[#d27542]">Student portal</p><h1 className="mt-3 text-4xl font-black tracking-tight text-[#173826]">Good evening, Student.</h1><p className="mt-3 text-lg text-slate-600">A personal learning dashboard designed to keep every next step clear.</p><div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">{[["Today’s class", "Spoken English · 6:00 PM"], ["Continue learning", "IELTS Reading · Lesson 4"], ["Upcoming test", "Mock Test 02 · Saturday"], ["Homework", "1 assignment awaiting submission"], ["Progress", "Your learning insights are ready"], ["Notifications", "No new updates"]].map(([title, detail]) => <Link href="/student/ielts" key={title} className="rounded-3xl bg-white p-5 shadow-sm transition hover:shadow-md"><p className="text-sm font-extrabold text-[#1e4d38]">{title}</p><p className="mt-3 text-sm text-slate-600">{detail}</p></Link>)}</div></section>;
+}
