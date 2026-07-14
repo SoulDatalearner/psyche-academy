@@ -1,14 +1,15 @@
-import { Stats } from "@/app/components/home/Stats";
-import { BlogPreview } from "@/app/components/home/BlogPreview";
-import { Contact } from "@/app/components/home/Contact";
-import { Courses } from "@/app/components/home/Courses";
-import { CTA } from "@/app/components/home/CTA";
-import { Footer } from "@/app/components/home/Footer";
-import { Founder } from "@/app/components/home/Founder";
-import { FreePractice } from "@/app/components/home/FreePractice";
-import { Hero } from "@/app/components/home/Hero";
-import { Testimonials } from "@/app/components/home/Testimonials";
-import { WhyChooseUs } from "@/app/components/home/WhyChooseUs";
+// If your folder is lowercase 'home', make sure the imports look exactly like this:
+import Stats from "@/components/home/Stats";
+import BlogPreview from "@/components/home/BlogPreview";
+import Contact from "@/components/home/Contact";
+import Courses from "@/components/home/Courses";
+import CTA from "@/components/home/CTA";
+import Footer from "@/components/home/Footer";
+import Founder from "@/components/home/Founder";
+import FreePractice from "@/components/home/FreePractice";
+import Hero from "@/components/home/Hero";
+import Testimonials from "@/components/home/Testimonials";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
 
 export default function Home() {
   return (
