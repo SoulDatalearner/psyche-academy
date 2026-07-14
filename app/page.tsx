@@ -1,3 +1,4 @@
+import { Stats } from "@/app/components/home/Stats";
 import { BlogPreview } from "@/app/components/home/BlogPreview";
 import { Contact } from "@/app/components/home/Contact";
 import { Courses } from "@/app/components/home/Courses";
