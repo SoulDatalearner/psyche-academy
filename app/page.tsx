@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default function Home() {
-  // Replace these with your real contact details!
-  const whatsappNumber = "1234567890"; // Include country code, no "+" or spaces (e.g., "447123456789")
-  const emailAddress = "hello@psycheacademy.com";
-  const phoneNumber = "+1234567890";
-  const whatsappMessage = encodeURIComponent("Hi! I'm curious to know more about Psyche Academy. I'd love to schedule a free demo!");
+  // Configured with your official details
+  const whatsappNumber = "917012224008"; // Country code first, no "+" or spaces
+  const emailAddress = "drsanjay@psyche-academy.com";
+  const phoneNumber = "+917012224008";
+  const whatsappMessage = encodeURIComponent("Hi Dr. Sanjay! I'm curious to know more about Psyche Academy. I'd love to schedule a free demo!");
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between p-6 md:p-12 selection:bg-indigo-500 selection:text-white">
@@ -47,7 +47,6 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-semibold rounded-xl shadow-md transition-all duration-200 transform hover:-translate-y-0.5"
             >
-              {/* WhatsApp SVG Icon */}
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.66.986 3.285 1.503 4.887 1.505 5.421.002 9.85-4.388 9.853-9.782.002-2.613-1.015-5.07-2.864-6.92C16.671 2.141 14.215 1.12 11.636 1.12c-5.429 0-9.858 4.387-9.86 9.782-.001 1.778.48 3.467 1.393 4.969L2.233 21.71l5.952-1.556zM18.121 15.1c-.297-.15-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
               </svg>
