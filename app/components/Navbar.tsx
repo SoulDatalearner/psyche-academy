@@ -40,14 +40,30 @@ export default function Navbar() {
 </Link>
 
         {/* Desktop Navigation Link Cluster */}
-        <div className="hidden md:flex items-center gap-8 font-medium text-slate-600">
-          <Link href="/" className="hover:text-teal-700 transition-colors">Home</Link>
-          <Link href="/courses" className="hover:text-teal-700 transition-colors">Courses</Link>
-          <Link href="/contact" className="hover:text-teal-700 transition-colors">Contact</Link>
-          <Link href="/free-practice" className="bg-teal-700 text-white px-4 py-2 rounded-xl text-sm transition hover:bg-teal-800">
-            Free Practice
-          </Link>
-        </div>
+        <div className="hidden md:flex items-center gap-6 font-medium text-slate-600">
+
+  <Link href="/">Home</Link>
+
+  <Link href="/about">About</Link>
+
+  <Link href="/services">Services</Link>
+
+  <Link href="/study-abroad">Study Abroad</Link>
+
+  <Link href="/courses">Courses</Link>
+
+  <Link href="/blog">Blog</Link>
+
+  <Link href="/contact">Contact</Link>
+
+  <Link
+    href="/free-practice"
+    className="bg-teal-700 text-white px-4 py-2 rounded-xl text-sm hover:bg-teal-800 transition"
+  >
+    Free Practice
+  </Link>
+
+</div>
 
         {/* Hamburger Mobile Toggle Button Control */}
         <button 
