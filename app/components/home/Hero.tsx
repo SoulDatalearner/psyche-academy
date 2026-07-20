@@ -1,6 +1,129 @@
+import Image from "next/image";
 import Link from "next/link";
-import { stats } from "./data";
 
 export function Hero() {
-  return <section className="relative overflow-hidden bg-[#f4faf9]"><div className="absolute -left-28 top-10 h-72 w-72 rounded-full bg-teal-100 blur-3xl" /><div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-amber-100/70 blur-3xl" /><div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-12 lg:py-24"><div><p className="inline-flex rounded-full bg-teal-100 px-3 py-1.5 text-xs font-extrabold uppercase tracking-[.14em] text-[#0F766E]">Learn · Grow · Achieve</p><h1 className="mt-6 max-w-3xl text-5xl font-black leading-[.98] tracking-[-.06em] text-[#1F2937] sm:text-6xl lg:text-7xl">Become the English Speaker <span className="text-[#0F766E]">You Always</span> Wanted To Be</h1><p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">Master IELTS, OET, PTE, Spoken English, Business English and Public Speaking through expert guidance and smart learning.</p><div className="mt-8 flex flex-col gap-3 sm:flex-row"><Link href="/welcome#contact" className="rounded-full bg-[#0F766E] px-6 py-3.5 text-center text-sm font-extrabold text-white shadow-lg shadow-teal-900/15 transition hover:-translate-y-0.5 hover:bg-teal-800">Book Free Consultation</Link><Link href="/free-practice" className="rounded-full border border-teal-700/20 bg-white px-6 py-3.5 text-center text-sm font-extrabold text-[#0F766E] transition hover:bg-teal-50">Start Free Practice</Link></div><div className="mt-12 grid max-w-xl grid-cols-3 gap-3 border-t border-teal-900/10 pt-6">{stats.map(([number, label]) => <div key={label}><p className="text-2xl font-black tracking-tight text-[#0F766E] sm:text-3xl">{number}</p><p className="mt-1 text-xs font-bold leading-5 text-slate-500">{label}</p></div>)}</div></div><div className="relative mx-auto w-full max-w-lg"><div className="rounded-[2rem] bg-[#0F766E] p-5 shadow-2xl shadow-teal-900/20 sm:p-7"><div className="rounded-2xl bg-white p-5"><div className="flex items-center gap-3"><span className="grid h-12 w-12 place-items-center rounded-2xl bg-amber-100 text-lg font-black text-[#b45309]">A</span><div><p className="text-sm font-extrabold text-slate-800">Your learning journey</p><p className="text-xs font-semibold text-slate-500">Small steps. Real confidence.</p></div></div><div className="mt-7 rounded-2xl bg-slate-50 p-4"><div className="flex items-end justify-between"><div><p className="text-xs font-bold text-slate-500">This week&apos;s focus</p><p className="mt-1 text-xl font-black text-slate-800">Spoken English</p></div><span className="rounded-full bg-teal-100 px-3 py-1 text-xs font-extrabold text-[#0F766E]">In progress</span></div><div className="mt-5 h-2.5 overflow-hidden rounded-full bg-teal-100"><div className="h-full w-2/3 rounded-full bg-[#0F766E]" /></div></div><div className="mt-4 grid grid-cols-3 gap-3">{[["Speak", "12 min"], ["Learn", "8 words"], ["Practice", "1 task"]].map(([title, value]) => <div key={title} className="rounded-xl bg-teal-50 p-3"><p className="text-xs font-bold text-teal-800">{title}</p><p className="mt-1 text-sm font-black text-slate-800">{value}</p></div>)}</div></div></div><div className="absolute -bottom-5 -left-3 rounded-2xl bg-white px-4 py-3 shadow-xl sm:-left-7"><p className="text-xs font-bold text-slate-500">Built for real life</p><p className="mt-1 text-sm font-extrabold text-[#0F766E]">Learn with confidence</p></div></div></div></section>;
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-white via-teal-50 to-cyan-100">
+      {/* Background Blur */}
+      <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-teal-200/30 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-200/30 blur-3xl" />
+
+      <div className="relative mx-auto flex min-h-[85vh] max-w-7xl flex-col items-center justify-between gap-12 px-6 py-20 lg:flex-row">
+
+        {/* LEFT */}
+        <div className="max-w-2xl">
+
+          <span className="inline-flex items-center rounded-full bg-teal-100 px-4 py-2 text-sm font-semibold text-teal-700">
+            🎓 Empowering Students Since Day One
+          </span>
+
+          <h1 className="mt-6 text-5xl font-extrabold leading-tight text-gray-900 lg:text-7xl">
+            Learn.
+            <br />
+            Grow.
+            <br />
+            <span className="text-teal-700">
+              Succeed.
+            </span>
+          </h1>
+
+          <p className="mt-8 text-xl leading-9 text-gray-600">
+            Psyche Academy helps students and professionals develop
+            communication, confidence and career skills through
+            IELTS, OET, PTE, Spoken English,
+            Business English, Public Speaking and
+            career-focused learning.
+          </p>
+
+          {/* Course Tags */}
+
+          <div className="mt-8 flex flex-wrap gap-3">
+
+            {[
+              "IELTS",
+              "OET",
+              "PTE",
+              "Spoken English",
+              "Business English",
+              "Public Speaking",
+            ].map((course) => (
+              <span
+                key={course}
+                className="rounded-full bg-white px-4 py-2 text-sm font-medium shadow"
+              >
+                {course}
+              </span>
+            ))}
+
+          </div>
+
+          {/* Buttons */}
+
+          <div className="mt-10 flex flex-wrap gap-4">
+
+            <Link
+              href="/free-practice"
+              className="rounded-xl bg-teal-700 px-8 py-4 text-lg font-semibold text-white transition hover:scale-105 hover:bg-teal-800"
+            >
+              Start Free Practice
+            </Link>
+
+            <Link
+              href="/contact"
+              className="rounded-xl border-2 border-teal-700 bg-white px-8 py-4 text-lg font-semibold text-teal-700 transition hover:bg-teal-700 hover:text-white"
+            >
+              Book Free Consultation
+            </Link>
+
+          </div>
+
+          {/* Trust */}
+
+          <div className="mt-10 flex items-center gap-4">
+
+            <div className="text-2xl text-yellow-500">
+              ★★★★★
+            </div>
+
+            <p className="text-gray-600">
+              Helping learners achieve academic,
+              professional and personal success.
+            </p>
+
+          </div>
+
+        </div>
+
+        {/* RIGHT */}
+
+        <div className="relative">
+
+          <Image
+            src="/hero-students.jpg"
+            alt="Students"
+            width={550}
+            height={650}
+            className="rounded-3xl shadow-2xl"
+            priority
+          />
+
+          {/* Floating Card */}
+
+          <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-xl">
+
+            <p className="text-3xl font-bold text-teal-700">
+              500+
+            </p>
+
+            <p className="text-gray-600">
+              Students Guided
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
 }
