@@ -57,11 +57,11 @@ export default function Navbar() {
   <Link href="/contact">Contact</Link>
 
   <Link
-    href="/free-practice"
-    className="bg-teal-700 text-white px-4 py-2 rounded-xl text-sm hover:bg-teal-800 transition"
-  >
-    Free Practice
-  </Link>
+  href="/contact"
+  className="bg-teal-700 text-white px-4 py-2 rounded-xl text-sm transition hover:bg-teal-800"
+>
+  Book a Free Trial
+</Link>
 
 </div>
 
@@ -81,19 +81,53 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown Panel Wrapper */}
-      {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full bg-white border-b border-slate-200 shadow-xl animate-in fade-in slide-in-from-top-4 duration-200">
-          <div className="flex flex-col p-6 gap-4 font-semibold text-slate-700">
-            <Link href="/" onClick={handleLinkClick} className="pb-2 border-b border-slate-50 hover:text-teal-700">Home</Link>
-            <Link href="/courses" onClick={handleLinkClick} className="pb-2 border-b border-slate-50 hover:text-teal-700">Courses</Link>
-            <Link href="/contact" onClick={handleLinkClick} className="pb-2 border-b border-slate-50 hover:text-teal-700">Contact</Link>
-            <Link href="/free-practice" onClick={handleLinkClick} className="text-center bg-teal-700 text-white py-3 rounded-xl transition hover:bg-teal-800">
-              Free Practice
-            </Link>
-          </div>
-        </div>
-      )}
-    </nav>
+{/* Mobile Menu */}
+{isOpen && (
+  <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-xl border-b border-slate-200">
+    <div className="flex flex-col p-6 gap-4">
+
+      <Link href="/" onClick={handleLinkClick} className="hover:text-teal-700">
+        Home
+      </Link>
+
+      <Link href="/about" onClick={handleLinkClick} className="hover:text-teal-700">
+        About
+      </Link>
+
+      <Link href="/career-guidance" onClick={handleLinkClick} className="hover:text-teal-700">
+        Career Guidance
+      </Link>
+
+      <Link href="/programs" onClick={handleLinkClick} className="hover:text-teal-700">
+        Programs
+      </Link>
+
+      <Link href="/study" onClick={handleLinkClick} className="hover:text-teal-700">
+        Study in India & Abroad
+      </Link>
+
+      <Link href="/corporate-training" onClick={handleLinkClick} className="hover:text-teal-700">
+        Corporate Training
+      </Link>
+
+      <Link href="/resources" onClick={handleLinkClick} className="hover:text-teal-700">
+        Resources
+      </Link>
+
+      <Link href="/contact" onClick={handleLinkClick} className="hover:text-teal-700">
+        Contact
+      </Link>
+
+      <Link
+        href="/contact"
+        onClick={handleLinkClick}
+        className="mt-4 bg-teal-700 text-white text-center py-3 rounded-xl font-semibold hover:bg-teal-800 transition"
+      >
+        Book a Free Trial
+      </Link>
+
+    </div>
+  </div>
+)}    </nav>
   );
 }
